@@ -24,12 +24,7 @@ class JreleaserPoc < Formula
 
 
   def install
-    libexec.install Dir["*"]
-    bin.install_symlink "jreleaser-poc" => "#{libexec}/bin/jreleaser-poc"
+    bin.install "bin/jreleaser-poc"
   end
 
-  test do
-    output = shell_output("#{bin}/jreleaser-poc --version")
-    assert_match "0.2.2", output
-  end
 end
