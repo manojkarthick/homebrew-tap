@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-27T04:47:57.273662816Z
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-27T10:39:14.07928752Z
 class JreleaserPoc < Formula
   desc "PoC for JReleaser"
   homepage "https://github.com/manojkarthick/jreleaser-poc"
@@ -7,25 +7,25 @@ class JreleaserPoc < Formula
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/manojkarthick/jreleaser-poc/releases/download/v0.2.5/jreleaser-poc-0.2.5-aarch64-unknown-linux-gnu.zip"
-    sha256 "9dde8c20769f238ddad95bdfd1a8fafc0b9d924eca78d2210c33191ca241bf99"
+    sha256 "7595c40df3b340b3da78b7b50fec1ea98f3ca350217b080ca0ac4669b50d874c"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/manojkarthick/jreleaser-poc/releases/download/v0.2.5/jreleaser-poc-0.2.5-x86_64-unknown-linux-gnu.zip"
-    sha256 "5970a033bd14b3838a2a721db64681e81ada52fbc86528310640e20e16b69b18"
+    sha256 "45e57d6016ccc64bc6b6b277ac53a44cca39c71df67955493532a9e619166bd5"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/manojkarthick/jreleaser-poc/releases/download/v0.2.5/jreleaser-poc-0.2.5-aarch64-apple-darwin.zip"
-    sha256 "2d2c523fd9b040c9ed2588484bf0ec182396b5fb45a0277c56f38a2812abdf32"
+    sha256 "59bfaa35d14deb958004c997d935f0d022532b8f5e2d7da2b43936a2a6696ae6"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/manojkarthick/jreleaser-poc/releases/download/v0.2.5/jreleaser-poc-0.2.5-x86_64-apple-darwin.zip"
-    sha256 "300e30da20bc9988288ede5f8068de30b3b806bb58f0745820801b61d9947f95"
+    sha256 "acd08e351e57b1db848e7b6fa263c4eda10a9453ee32c864748470341258ec55"
   end
 
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink "jreleaser-poc" => "#{libexec}/bin/jreleaser-poc"
+    bin.install_symlink "#{libexec}/bin/jreleaser-poc" => "jreleaser-poc"
   end
 
   test do
