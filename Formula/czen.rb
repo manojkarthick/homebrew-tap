@@ -1,25 +1,25 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-31T07:26:26.526816879Z
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-02-18T10:21:59.063585035Z
 class Czen < Formula
   desc "Simple CLI tool to interactively create conventional commits"
   homepage "https://github.com/manojkarthick/czen"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/manojkarthick/czen/releases/download/v0.1.0/czen-0.1.0-aarch64-unknown-linux-gnu.zip"
-    sha256 "2b8d466e54804840d49bd857f171d3d759895d5681abe922d46a711ddcde6d94"
+    url "https://github.com/manojkarthick/czen/releases/download/v0.1.1/czen-0.1.1-aarch64-unknown-linux-gnu.zip"
+    sha256 "2b023ad3fddad621849ba211d9e316dd1cda2f2796620321bf105985d9442ee4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/manojkarthick/czen/releases/download/v0.1.0/czen-0.1.0-x86_64-unknown-linux-gnu.zip"
-    sha256 "6b02b95f69401f09f4ae674b0dd1342f06cbfe42d4a05884382998af70b42e40"
+    url "https://github.com/manojkarthick/czen/releases/download/v0.1.1/czen-0.1.1-x86_64-unknown-linux-gnu.zip"
+    sha256 "8f720704e86c8f1d4850a9a1a5648a6b41ea3b315365f9d669d76b5a34829d59"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/manojkarthick/czen/releases/download/v0.1.0/czen-0.1.0-aarch64-apple-darwin.zip"
-    sha256 "03baac1bd88d5a7bcbe161e30c6d120a2f5b9a4b9101eef8da82ba7c6bec9424"
+    url "https://github.com/manojkarthick/czen/releases/download/v0.1.1/czen-0.1.1-aarch64-apple-darwin.zip"
+    sha256 "c7608b4b835ff3338f55d0c7aeb6c6a1caf063dcc04372fe43b4b33ffa4e9698"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/manojkarthick/czen/releases/download/v0.1.0/czen-0.1.0-x86_64-apple-darwin.zip"
-    sha256 "13d97463b37dc8031a6c08cb5117a9951ee6e1b9b1c4c0edf90fcee6b5ac7cab"
+    url "https://github.com/manojkarthick/czen/releases/download/v0.1.1/czen-0.1.1-x86_64-apple-darwin.zip"
+    sha256 "19621777c880132c406797a39450f76176bc74bf181d9ebd50dbae9a08637048"
   end
 
 
@@ -30,6 +30,6 @@ class Czen < Formula
 
   test do
     output = shell_output("#{bin}/czen --version")
-    assert_match "0.1.0", output
+    assert_match "0.1.1", output
   end
 end
