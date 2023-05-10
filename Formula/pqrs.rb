@@ -1,25 +1,25 @@
-# Generated with JReleaser 1.1.0-SNAPSHOT at 2022-05-14T20:41:00.726693587Z
+# Generated with JReleaser 1.7.0-SNAPSHOT at 2023-05-10T02:53:48.903767908Z
 class Pqrs < Formula
   desc "Apache Parquet command-line tools and utilities"
   homepage "https://github.com/manojkarthick/pqrs"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/manojkarthick/pqrs/releases/download/v0.2.1/pqrs-0.2.1-aarch64-unknown-linux-gnu.zip"
-    sha256 "286bb3d613543d7fec426cc67f82c3559147832dc7e72be87b5076889ffd3770"
+    url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.0/pqrs-0.3.0-aarch64-unknown-linux-gnu.zip"
+    sha256 "f2184bccf6f6722611077ba32fbd7f5ee115f0c5869435a485e2a2e2ce4650eb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/manojkarthick/pqrs/releases/download/v0.2.1/pqrs-0.2.1-x86_64-unknown-linux-gnu.zip"
-    sha256 "3f8636b7616038de041a46813be14bb4980f7dfa3f513487e5d27af3aeb820c7"
+    url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.0/pqrs-0.3.0-x86_64-unknown-linux-gnu.zip"
+    sha256 "40bed5fd6ede6e59bd2ef6eab6ecd494fee0f442bfa378c6be799c0177bc5c10"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/manojkarthick/pqrs/releases/download/v0.2.1/pqrs-0.2.1-aarch64-apple-darwin.zip"
-    sha256 "391d2c870217c59623c0075c1fc161c7355928b3bca2e2d5ecf8a82c76f0215d"
+    url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.0/pqrs-0.3.0-aarch64-apple-darwin.zip"
+    sha256 "674d3c6f4c5165502684e88204fceff0fb8e4964e9052ea9a710aa785a7bcafe"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/manojkarthick/pqrs/releases/download/v0.2.1/pqrs-0.2.1-x86_64-apple-darwin.zip"
-    sha256 "3ba59a58c6b08bc2aff364eae46f35636c275668fa663414d454ef806cf0475b"
+    url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.0/pqrs-0.3.0-x86_64-apple-darwin.zip"
+    sha256 "f72e5a8dd5f3e540232db013483f90f30ed06fd6ed088e33b4009a19b14e51d6"
   end
 
 
@@ -30,6 +30,6 @@ class Pqrs < Formula
 
   test do
     output = shell_output("#{bin}/pqrs --version")
-    assert_match "0.2.1", output
+    assert_match "0.3.0", output
   end
 end
