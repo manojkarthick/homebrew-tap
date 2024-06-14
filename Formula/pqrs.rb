@@ -1,4 +1,5 @@
-# Generated with JReleaser 1.7.0-SNAPSHOT at 2023-05-27T21:18:45.6476103Z
+# Generated with JReleaser 1.13.0-SNAPSHOT at 2024-06-14T00:37:49.166974247Z
+
 class Pqrs < Formula
   desc "Apache Parquet command-line tools and utilities"
   homepage "https://github.com/manojkarthick/pqrs"
@@ -7,19 +8,19 @@ class Pqrs < Formula
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.1/pqrs-0.3.1-aarch64-unknown-linux-gnu.zip"
-    sha256 "d1c5c74ebde7b24178de780e00e6d155a599f1fae928f59b19f8c3b158adb7d9"
+    sha256 "1456dc8660e74b6ec5bd50fde88d31b28700d5fbc2b57607fead6a629d1c7076"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.1/pqrs-0.3.1-x86_64-unknown-linux-gnu.zip"
-    sha256 "329ed189fecb7e2919f8013db7b746905d0c735abc42048dec3f7695a84f732c"
+    sha256 "b10e81a1f3901b7379f1ffa432b4e7cd228b65cb3b85fb0eabe0d27d5b84c4fd"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.1/pqrs-0.3.1-aarch64-apple-darwin.zip"
-    sha256 "1b8394eef4db468b364ac4c419924021de267d9e424aa29f57c2ed86c7bb9342"
+    sha256 "7a7df5b03c31170d601a6e07ea01d0780eefc183368af86cf3157f29d459e953"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/manojkarthick/pqrs/releases/download/v0.3.1/pqrs-0.3.1-x86_64-apple-darwin.zip"
-    sha256 "39101bffccc762138c913ed29ac2a229816b9a4acfec239e5533714a531f4e42"
+    sha256 "04b806b91d9249159e8e9461883cde783f3e803cb5b34d64273611df9bde5de0"
   end
 
 
