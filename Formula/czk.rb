@@ -3,9 +3,9 @@ class Czk < Formula
 
   desc "CLI wrapper around czkawka_cli for duplicate media workflows"
   homepage "https://github.com/manojkarthick/czk"
-  url "https://files.pythonhosted.org/packages/14/d1/fce0d461eae77c76b54fba721685dc0de9736bb6a753f3c07234a28e6c94/czk_tool-1.0.9.tar.gz"
-  sha256 "96c6faa05a5a7eb0686d1b149c4caf631dbc9337b1f47aff24e11c659f9d7599"
-  version "1.0.9"
+  url "https://files.pythonhosted.org/packages/42/0a/f929f312cc99c3acc2f7211417933776db450d37f9df513c824624507f54/czk_tool-1.0.10.tar.gz"
+  sha256 "24755ac0dc9503356df710cd75b3f9f0cf4967899dde5d5a46fe990d01bf7ed5"
+  version "1.0.10"
   license "MIT"
 
   depends_on "python@3.14"
@@ -13,8 +13,8 @@ class Czk < Formula
   depends_on "duckdb"
 
   resource "czk-tool" do
-    url "https://files.pythonhosted.org/packages/14/d1/fce0d461eae77c76b54fba721685dc0de9736bb6a753f3c07234a28e6c94/czk_tool-1.0.9.tar.gz"
-    sha256 "96c6faa05a5a7eb0686d1b149c4caf631dbc9337b1f47aff24e11c659f9d7599"
+    url "https://files.pythonhosted.org/packages/42/0a/f929f312cc99c3acc2f7211417933776db450d37f9df513c824624507f54/czk_tool-1.0.10.tar.gz"
+    sha256 "24755ac0dc9503356df710cd75b3f9f0cf4967899dde5d5a46fe990d01bf7ed5"
   end
 
   resource "markdown-it-py" do
@@ -39,9 +39,10 @@ class Czk < Formula
 
   def install
     virtualenv_install_with_resources
+    bin.install_symlink libexec/"bin/czk"
   end
 
   test do
-    assert_match "1.0.9", shell_output("#{bin}/czk --version")
+    assert_match "1.0.10", shell_output("#{bin}/czk --version")
   end
 end
