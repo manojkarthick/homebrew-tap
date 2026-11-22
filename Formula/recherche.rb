@@ -1,20 +1,20 @@
 class Recherche < Formula
   desc "Search your past Claude Code and Codex sessions"
   homepage "https://github.com/manojkarthick/recherche"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/manojkarthick/recherche/releases/download/v0.4.0/recherche-0.4.0-aarch64-unknown-linux-gnu.zip"
-    sha256 "b7042823a65032e690194e03dd31c29d2cfbc5cd2743867002a3bc4f17b6e537"
+    url "https://github.com/manojkarthick/recherche/releases/download/v0.5.0/recherche-0.5.0-aarch64-unknown-linux-gnu.zip"
+    sha256 "a5c79ee69f1f7f8b8564397306432a401dd0e511af5bdd16a5f8d1d7d29f4b7c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/manojkarthick/recherche/releases/download/v0.4.0/recherche-0.4.0-x86_64-unknown-linux-gnu.zip"
-    sha256 "bfe43624211f78d1476bb1ccb4c1c0d5a263a4447e4c14fb751e4c82e197d7a4"
+    url "https://github.com/manojkarthick/recherche/releases/download/v0.5.0/recherche-0.5.0-x86_64-unknown-linux-gnu.zip"
+    sha256 "0c2996e214ed1a6ca2ed96a6974b21173bbcc70f41909925d9c8eac2a4cdf7cc"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/manojkarthick/recherche/releases/download/v0.4.0/recherche-0.4.0-aarch64-apple-darwin.zip"
-    sha256 "e48ab67cf36284424571a8c99a770e4c9b906c0be8854dee587afaf0e12be840"
+    url "https://github.com/manojkarthick/recherche/releases/download/v0.5.0/recherche-0.5.0-aarch64-apple-darwin.zip"
+    sha256 "2b8d77987294a4b172089b7cf921616e3d8ead0e2760c94ac623a37014e89207"
   end
 
   on_macos do
