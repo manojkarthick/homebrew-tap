@@ -14,7 +14,7 @@ cask "openusage" do
   binary "#{appdir}/OpenUsage.app/Contents/Helpers/openusage"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenUsage.app"]
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/OpenUsage.app"]
   end
 
   zap trash: [
