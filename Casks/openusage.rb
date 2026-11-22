@@ -8,14 +8,13 @@ cask "openusage" do
   homepage "https://github.com/manojkarthick/openusage"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "OpenUsage.app"
   binary "#{appdir}/OpenUsage.app/Contents/Helpers/openusage"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenUsage.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/OpenUsage.app"]
   end
 
   zap trash: [
