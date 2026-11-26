@@ -1,7 +1,7 @@
 cask "pentimento" do
   # Placeholder until the first release; manojkarthick/pentimento's Release workflow bumps both lines.
-  version "0.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  version "0.1.0"
+  sha256 "f4e6873470f66e7505ebb7bb02dc70a9dfe3c07281a90b0483b07e1ba0ca9f63"
 
   url "https://github.com/manojkarthick/pentimento/releases/download/v#{version}/Pentimento-#{version}.dmg"
   name "Pentimento"
