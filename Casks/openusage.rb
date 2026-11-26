@@ -1,12 +1,13 @@
 cask "openusage" do
-  version "0.7.20-beta.1"
-  sha256 "ef318b76f3afa4de14bf869d3fbffafc7f3d20463aa89fbe40247ddb3dde385b"
+  version "0.7.19"
+  sha256 "a9a3de4056d5e81b8aa6eab6217e283c88323ab986af3be5e69b63d20723da67"
 
   url "https://github.com/manojkarthick/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg"
   name "OpenUsage"
   desc "Menu bar app for tracking AI coding subscription limits (v0.7 fork)"
   homepage "https://github.com/manojkarthick/openusage"
 
+  conflicts_with cask: "openusage@beta"
   depends_on arch: :arm64
   depends_on macos: :sequoia
 
@@ -18,8 +19,8 @@ cask "openusage" do
   end
 
   zap trash: [
-    "~/Library/Application Support/OpenUsage",
     "~/Library/Application Support/com.robinebers.openusage",
+    "~/Library/Application Support/OpenUsage",
     "~/Library/Logs/OpenUsage",
     "~/Library/Preferences/com.robinebers.openusage.plist",
   ]

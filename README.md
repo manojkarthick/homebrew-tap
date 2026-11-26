@@ -44,5 +44,12 @@ brew install --cask <formula>
 
 If you get a dialog stating the cask is broken try installing with `--no-quarantine`.
 
+### Beta channels
+Casks with a beta channel ship it as a separate `<cask>@beta` cask, for example `openusage@beta`. It gets every beta and every stable release. The two conflict, so to switch channels uninstall one before installing the other:
+
+```sh
+brew uninstall --cask openusage && brew install --cask manojkarthick/tap/openusage@beta
+```
+
 ## Documentation
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
