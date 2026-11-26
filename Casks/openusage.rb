@@ -7,6 +7,7 @@ cask "openusage" do
   desc "Menu bar app for tracking AI coding subscription limits (v0.7 fork)"
   homepage "https://github.com/manojkarthick/openusage"
 
+  auto_updates true
   conflicts_with cask: "openusage@beta"
   depends_on arch: :arm64
   depends_on macos: :sequoia
