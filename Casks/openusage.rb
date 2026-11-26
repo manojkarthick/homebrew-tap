@@ -1,6 +1,6 @@
 cask "openusage" do
-  version "0.7.19"
-  sha256 "a9a3de4056d5e81b8aa6eab6217e283c88323ab986af3be5e69b63d20723da67"
+  version "0.7.20-beta.1"
+  sha256 "ef318b76f3afa4de14bf869d3fbffafc7f3d20463aa89fbe40247ddb3dde385b"
 
   url "https://github.com/manojkarthick/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg"
   name "OpenUsage"
